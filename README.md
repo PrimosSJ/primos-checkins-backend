@@ -6,7 +6,7 @@ Disclaimer: **Este servicio solo funciona en la máquina prime**
 
 ### Instalación:
 ```
-docker compose up
+docker compose up --build -d
 ```
 Esto crea dos contenedores, uno para la base de datos, llamado postgres, y otro para el backend.
 Hecho eso estará todo instalado pero quizá no 100% funcional.
