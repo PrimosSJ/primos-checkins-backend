@@ -15,7 +15,7 @@ services:
       - POSTGRES_PASSWORD=0
     deploy:
       restart_policy:
-        condition: on-failure
+        condition: unless-stopped
         delay: 30s
         window: 120s
     depends_on:
@@ -29,6 +29,7 @@ services:
       - POSTGRES_DB=primos_checkins
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=0
+    restart: unless-stopped
     ports:
       - "5433:5432"
 volumes:
